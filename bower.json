@@ -1,0 +1,29 @@
+{
+  "name": "TodoList",
+  "version": "0.0.0",
+  "homepage": "https://github.com/zhangjunmin/TodoList",
+  "authors": [
+    "zhangjunmin <zhangjunmin@wedocare.com>"
+  ],
+  "description": "待办事项",
+  "main": "main.js",
+  "keywords": [
+    "backbone",
+    "node",
+    "es6"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.3.3",
+    "jquery": "~3.2.1",
+    "touchjs": "~0.2.14"
+  }
+}
