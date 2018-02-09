@@ -1,4 +1,8 @@
-1、前端用backbonejs+touch.js
-2、后台用koajs
-3、全程用es6
-4、h5页面
+技术:
+    1、前端用backbonejs
+    2、后台用nodejs koajs
+    3、数据库:mongodb
+    4、全程用es6
+业务:
+    页面：首页，列表页（搜索）、详情页、保存-修改
+    
