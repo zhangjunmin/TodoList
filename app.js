@@ -1,27 +1,20 @@
 // 路由
-const router = require('koa-router')();
+const router = require('./router/router');
 // 格式化参数
 const bodyParse = require('koa-bodyparser');
+// 视图
+const views = require('koa-views');
+// 静态资源
+const serve = require('koa-static');
 
-// 导入koa，和koa 1.x不同，在koa2中，我们导入的是一个class，因此用大写的Koa表示:
+// 导入koa
 const Koa = require('koa');
 const app = new Koa();
 
-app.use(bodyParser());
-// 列表
-router.get('/list', async (cxt, next) => {
-    cxt.response.body = '<h1>list</h1>';
-})
-// 详情
-router.get('/detail/:id', async (cxt, next) => {
-    var id = cxt.params.id;
-    cxt.response.body = `<h1>detail</h1><p>${id}</p>`;
-})
-// 首页
-router.get('/', async (cxt, next) => {
-    cxt.response.body = '<h1>Index</h1>';
-})
-
+// 设置静态资源地址
+app.use(serve(__dirname + '/bower_components'));
+//view
+app.use(views(__dirname + '/views'));
 
 app.use(router.routes());
 app.listen(3000, function() {
