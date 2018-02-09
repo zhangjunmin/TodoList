@@ -13,6 +13,7 @@ const app = new Koa();
 
 // 设置静态资源地址
 app.use(serve(__dirname + '/bower_components'));
+app.use(serve(__dirname + '/resource'));
 //view
 app.use(views(__dirname + '/views'));
 
